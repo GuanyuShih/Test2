@@ -1,8 +1,8 @@
 //
-//  ViewController.m
+//  EnterViewController.m
 //  Test2
 //
-//  Created by Allen on 2015/12/28.
+//  Created by Allen on 2015/12/31.
 //  Copyright © 2015年 Allen. All rights reserved.
 //
 
@@ -14,14 +14,36 @@
 
 @implementation ViewController
 
+- (void)viewDidAppear:(BOOL)animated
+{
+    UIAlertController *alertController =[UIAlertController alertControllerWithTitle: @"title" message:@"meg" preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *okAction = [UIAlertAction actionWithTitle: @"confirm" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action){
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+    [alertController addAction:okAction];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    // Do any additional setup after loading the view.
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+/*
+#pragma mark - Navigation
+
+// In a storyboard-based application, you will often want to do a little preparation before navigation
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
+}
+*/
 
 @end

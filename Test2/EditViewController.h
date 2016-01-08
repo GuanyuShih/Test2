@@ -1,5 +1,5 @@
 //
-//  EnterViewController.h
+//  EditViewController.h
 //  Test2
 //
 //  Created by Allen on 2015/12/31.
@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+
+@interface EditViewController : UIViewController <UITextFieldDelegate> {
+}
+
 
 @end
