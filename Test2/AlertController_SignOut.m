@@ -51,7 +51,9 @@
     }];
     
     UIAlertAction *otherAction = [UIAlertAction actionWithTitle:otherButtonTitle style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
-        NSLog(@"The \"Okay/Cancel\" alert's other action occured.");
+    //    NSLog(@"The \"Okay/Cancel\" alert's other action occured.");
+        [self dismissViewControllerAnimated:YES completion:nil];
+
     }];
     
     // Add the actions.
